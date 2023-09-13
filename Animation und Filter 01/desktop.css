@@ -1,0 +1,47 @@
+/******Für Bildschirmgrößen ab 600 Pixeln *******/
+@media screen and (min-width: 600px) {
+    
+/***** Inhalt mit 3 Spalten *****/
+    main{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    /***** mindest Höhe und Breite *****/
+    main div{
+        min-width: 300px;
+        min-height: 300px;
+    }
+    /**** Inhalt startet in Spalte 3 ****/
+    main .box-2{
+        grid-column-start: 3;
+    }
+    /**** Inhalt startet in Spalte 2 ****/
+    main .box-3{
+        grid-column-start: 2;
+    }
+    /*** Inhalt startet in Zeile 3 ***/
+    main .box-4{
+        grid-row-start: 3;
+    }
+    /*** Inhalt startet in Spalte 2
+         auf Zeile 3 und wird auf 2 Spalten gestreckt ***/
+    main .box-5{
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-column-end: span 2;
+    }
+    /*** Inhalt startet in Zeile 4 und wird
+         auf 2 Spalten und 2 Zeilen gestreckt ***/
+    main .box-6{
+        grid-row-start: 4;
+        grid-row-end: span 2;
+        grid-column-end: span 2;
+    }
+    /*** Inhalt startet In Spalte 3 auf Zeile 4
+         und wird auf 2Zeilen gestreckt ***/
+    main .box-7{
+        grid-row-start: 4;
+        grid-column-start: 3;
+        grid-row-end: span 2;
+    }
+}

@@ -1,0 +1,84 @@
+/****** Greift für alle Bildschirmgrößen *******/
+
+main div{
+    margin: 20px;
+}
+/****** Inhalt mit Farbverläufen *****/
+
+/******* Linearer Farbverlauf *******/
+main .box-1 {
+    background-image: linear-gradient(45deg, 
+    aqua, 
+    darkorange, 
+    aqua, 
+    darkorange);
+}
+/****** Kegelförmiger Farbverlauf *******/
+main .box-2 {
+    background-image: conic-gradient(
+        black, 
+        red, 
+        black, 
+        red, 
+        black, 
+        red, 
+        black);
+}
+/***** Runder Farbverlauf *****/
+main .box-3{
+    background-image: radial-gradient(
+        blue, 
+        white, 
+        blue, 
+        white, 
+        blue , 
+        white);
+}
+
+/***** Inhalt mit Bildern und Filtern ******/
+
+/**** Legt die Höhe und Breite fest *****/
+main img{
+    width: 100%;
+    height: 100%;
+}
+/**** Ändert Kontrast und Helligkeit ****/
+main .box-4 img{
+    filter: contrast(10) 
+            brightness(5);
+}
+/***** Entfernt den Filter wenn die Maus auf dem Element ist ****/
+main .box-4 img:hover{
+    filter: none;
+    transition: 1.5s;
+}
+main .box-5 img{
+    transition: 2s;
+}
+/**** Die Farben werden umgekehrt und Die Ecken abgrundet 
+      wenn die MAus drauf ist ****/
+main .box-5 img:hover{
+    filter: hue-rotate(180deg);
+    border-radius: 50%;
+}
+main .box-6 img{
+    transition: 2.5s;
+}
+/***** Kehrt die Farben um und erstellt einen Schatten 
+       wenn die Maus drauf ist *****/
+main .box-6 img:hover{
+    filter: invert(5) 
+            drop-shadow(10px 10px 10px black);
+}
+main .box-7 img{
+    transition: 2s;
+}
+/***** verpasst dem Bild einen Sepia Filter 
+       und ändert die Breite und Höhe und rundet 
+       die Ecken ab wenn die Maus drauf ist *****/
+main .box-7 img:hover{
+    filter: sepia(1);
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
